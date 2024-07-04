@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox with Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('science.jpeg');
+            /* Replace 'background.jpg' with your image file path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .flex-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Background color for the flexbox */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Add additional styling to your flex container as needed */
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <!-- Your content goes here -->
+        <h1>IT'S SCIENCE FOR YOU!</h1>
+        <p></p>
+    </div>
+</body>
+
+</html>

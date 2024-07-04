@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <!-- Link to your CSS file for styling -->
+    <style>
+        /* Add your CSS styles here */
+        /* Add any additional styles you need */
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+fieldset {
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Add this rule to color the entire fieldset on hover */
+fieldset:hover {
+    transform: translateY(-5px);
+    background-color: #b2ebf2;
+}
+
+/* Add this rule to color the label text */
+fieldset label {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+} 
+
+</style> 
+</head>
+<body>
+    <h1>Questionnaire</h1>
+    <form action="/predict" method="post">
+        <!-- Question 1: Single-choice -->
+        <fieldset>
+            <legend> What are your hobbies and interests outside of academics?</legend>
+            <label>
+                <input type="radio" name="intrest_1" value="i11">Sports and outdoor activities
+            </label>
+            <label>
+                <input type="radio" name="intrest_1" value="i12"> Arts and creative pursuits
+            </label>
+            <label>
+                <input type="radio" name="intrest_1" value="i13"> Science and technology hobbies
+            </label>
+            <label>
+                <input type="radio" name="intrest_1" value="i14"> Social and community involvement
+            </label>
+            <label>
+                <input type="radio" name="intrest_1" value="i15"> None of the above
+            </label>
+        </fieldset>
+
+        <!-- Question 2: Single-choice -->
+        <fieldset>
+            <legend>Which subjects or activities do you enjoy the most?</legend>
+            <label>
+                <input type="radio" name="intrest_2" value="i21"> Math and science
+            </label>
+            <label>
+                <input type="radio" name="intrest_2" value="i22"> Writing and literature 
+            </label>
+            <label>
+                <input type="radio" name="intrest_2" value="i23"> Art and design 
+            </label>
+            <label>
+                <input type="radio" name="intrest_2" value="i24"> Social sciences and humanities 
+            </label>
+            <label>
+                <input type="radio" name="intrest_2" value="i25"> None of the above
+            </label>
+        </fieldset>
+        
+        <!-- Question 3: Single-choice -->
+        <fieldset>
+            <legend>Can you think of a project or activity you've enjoyed so much that you lost track of time while doing it?</legend>
+            <label>
+                <input type="radio" name="intrest_3" value="i31"> Yes, multiple times 
+            </label>
+            <label>
+                <input type="radio" name="intrest_3" value="i32"> Occasionally
+            </label>
+            <label>
+                <input type="radio" name="intrest_3" value="i33"> Rarely 
+            </label>
+            <label>
+                <input type="radio" name="intrest_3" value="i34"> Never 
+            </label>
+            <label>
+                <input type="radio" name="intrest_3" value="i35"> Not sure 
+            </label>
+        </fieldset>
+
+        <!-- Question 4: Single-choice -->
+        <fieldset>
+            <legend>Do you have any role models or individuals whose careers you admire?</legend>
+            <label>
+                <input type="radio" name="intrest_4" value="i41"> Yes Several
+            </label>
+            <label>
+                <input type="radio" name="intrest_4" value="i42"> One or Two 
+            </label>
+            <label>
+                <input type="radio" name="intrest_4" value="i43"> Not Really
+            </label>
+            <label>
+                <input type="radio" name="intrest_4" value="i44"> I haven't thought about it 
+            </label>
+            <label>
+                <input type="radio" name="intrest_4" value="i45"> Not Sure
+            </label>
+        </fieldset>
+
+        <!-- Question 5: Single-choice -->
+        <fieldset>
+            <legend>How do you envision yourself contributing to society or making a difference in the world through your career?</legend>
+            <label>
+                <input type="radio" name="intrest_5" value="i51"> Helping people directly
+            </label>
+            <label>
+                <input type="radio" name="intrest_5" value="i52"> Innovating and solving problems
+            </label>
+            <label>
+                <input type="radio" name="intrest_5" value="i53"> Creatively Expressing Ideas
+            </label>
+            <label>
+                <input type="radio" name="intrest_5" value="i54"> Advocating for social change 
+            </label>
+            <label>
+                <input type="radio" name="intrest_5" value="i55"> Not Sure
+            </label>
+        </fieldset>
+
+        <!-- Question 6: Single-choice -->
+        <fieldset>
+            <legend>Which subjects or courses do you excel in?</legend>
+            <label>
+                <input type="radio" name="acad_1" value="a11"> Math and science 
+            </label>
+            <label>
+                <input type="radio" name="acad_1" value="a12"> Language and literature 
+            </label>
+            <label>
+                <input type="radio" name="acad_1" value="a13"> Arts and humanities 
+            </label>
+            <label>
+                <input type="radio" name="acad_1" value="a14"> Social studies 
+            </label>
+            <label>
+                <input type="radio" name="acad_1" value="a15"> None of the above
+            </label>
+        </fieldset>
+
+        <!-- Question 7: Single-choice -->
+        <fieldset>
+            <legend>Are there any academic achievements or projects you're particularly proud of?</legend>
+            <label>
+                <input type="radio" name="acad_2" value="a21"> Yes, many 
+            </label>
+            <label>
+                <input type="radio" name="acad_2" value="a22"> A few 
+            </label>
+            <label>
+                <input type="radio" name="acad_2" value="a23"> Not really
+            </label>
+            <label>
+                <input type="radio" name="acad_2" value="a24"> I haven't thought about it
+            </label>
+            <label>
+                <input type="radio" name="acad_2" value="a25"> Not sure
+            </label>
+        </fieldset>
+
+        <!-- Question 8: Single-choice -->
+        <fieldset>
+            <legend>Do you find certain subjects more engaging and enjoyable than others?</legend>
+            <label>
+                <input type="radio" name="acad_3" value="a31"> Yes, definitely 
+            </label>
+            <label>
+                <input type="radio" name="acad_3" value="a32"> Somewhat
+            </label>
+            <label>
+                <input type="radio" name="acad_3" value="a33"> Not really 
+            </label>
+            <label>
+                <input type="radio" name="acad_3" value="a34"> I don't have a strong preference 
+            </label>
+            <label>
+                <input type="radio" name="acad_3" value="a35"> Not sure 
+            </label>
+        </fieldset>
+
+        <!-- Question 9: Single-choice -->
+        <fieldset>
+            <legend>Are there any areas in which you struggle academically?</legend>
+            <label>
+                <input type="radio" name="acad_4" value="a41"> Yes, multiple times
+            </label>
+            <label>
+                <input type="radio" name="acad_4" value="a42"> In one or two subjects
+            </label>
+            <label>
+                <input type="radio" name="acad_4" value="a43"> Not really
+            </label>
+            <label>
+                <input type="radio" name="acad_4" value="a44"> I haven't noticed
+            </label>
+            <label>
+                <input type="radio" name="acad_4" value="a45"> Not sure
+            </label>
+        </fieldset>
+
+        <!-- Question 10: Single-choice -->
+        <fieldset>
+            <legend>How do your academic interests align with potential career paths you're considering?</legend>
+            <label>
+                <input type="radio" name="acad_5" value="a51"> Strong alignment
+            </label>
+            <label>
+                <input type="radio" name="acad_5" value="a52"> Some alignment
+            </label>
+            <label>
+                <input type="radio" name="acad_5" value="a53"> Not much alignment
+            </label>
+            <label>
+                <input type="radio" name="acad_5" value="a54"> I'm not sure about my career path
+            </label>
+            <label>
+                <input type="radio" name="acad_5" value="a55"> Not sure
+            </label>
+        </fieldset>
+
+        <!-- Question 11: Single-choice -->
+        <fieldset>
+            <legend>How would you describe your personality?</legend>
+            <label>
+                <input type="radio" name="pers_1" value="p11"> Introverted 
+            </label>
+            <label>
+                <input type="radio" name="pers_1" value="p12"> Extroverted
+            </label>
+            <label>
+                <input type="radio" name="pers_1" value="p13"> Ambivert
+            </label>
+            <label>
+                <input type="radio" name="pers_1" value="p14"> Reserved 
+            </label>
+            <label>
+                <input type="radio" name="pers_1" value="p15"> Not sure
+            </label>
+        </fieldset>
+
+        <!-- Question 12: Single-choice -->
+        <fieldset>
+            <legend>In group settings, do you naturally take on leadership roles or prefer to contribute in other ways?</legend>
+            <label>
+                <input type="radio" name="pers_2" value="p21"> Always take on leadership roles
+            </label>
+            <label>
+                <input type="radio" name="pers_2" value="p22"> Sometimes take on leadership roles 
+            </label>
+            <label>
+                <input type="radio" name="pers_2" value="p23"> Prefer other roles in groups
+            </label>
+            <label>
+                <input type="radio" name="pers_2" value="p24"> I haven't been in many group situations
+            </label>
+            <label>
+                <input type="radio" name="pers_2" value="p25"> Not sure
+            </label>
+        </fieldset>
+
+        <!-- Question 13: Single-choice -->
+        <fieldset>
+            <legend>Are you more inclined towards problem-solving, creativity, or analytical thinking?</legend>
+            <label>
+                <input type="radio" name="pers_3" value="p31"> Problem-Solving
+            </label>
+            <label>
+                <input type="radio" name="pers_3" value="p32"> Creativity
+            </label>
+            <label>
+                <input type="radio" name="pers_3" value="p33"> Analytical thinking 
+            </label>
+            <label>
+                <input type="radio" name="pers_3" value="p34"> A combination of these
+            </label>
+            <label>
+                <input type="radio" name="pers_3" value="p35"> Not sure 
+            </label>
+        </fieldset>
+
+        <!-- Question 14: Single-choice -->
+        <fieldset>
+            <legend>How do you handle stress and challenging situations?</legend>
+            <label>
+                <input type="radio" name="pers_4" value="p41"> Stay calm and problem-solving
+            </label>
+            <label>
+                <input type="radio" name="pers_4" value="p42"> Creativity
+            </label>
+            <label>
+                <input type="radio" name="pers_4" value="p43"> Analytical thinking
+            </label>
+            <label>
+                <input type="radio" name="pers_4" value="p44"> A combination of these
+            </label>
+            <label>
+                <input type="radio" name="pers_4" value="p45"> Not Sure
+            </label>
+        </fieldset>
+
+        <!-- Question 15: Single-choice -->
+        <fieldset>
+            <legend>Do you enjoy working independently or as part of a team?</legend>
+            <label>
+                <input type="radio" name="pers_5" value="p51"> Prefer working independently
+            </label>
+            <label>
+                <input type="radio" name="pers_5" value="p52"> Enjoy both independently and in teams
+            </label>
+            <label>
+                <input type="radio" name="pers_5" value="p53"> Prefer working in teams
+            </label>
+            <label>
+               <input type="radio" name="pers_5" value="p54"> I'm not sure 
+            </label>
+            <label>
+                <input type="radio" name="pers_5" value="p55"> not sure 
+             </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Which of the following careers appeals to you the most?</legend>
+            <label>
+                <input type="radio" name="car_1" value="c11"> Artist or Designer 
+            </label>
+            <label>
+                <input type="radio" name="car_1" value="c12">Accountant or financial Analyst
+            </label>
+            <label>
+               <input type="radio" name="car_1" value="c13"> Doctor or healthcare professional
+            </label>
+            <label>
+                <input type="radio" name="car_1" value="c14"> Teacher or Educator 
+            </label>
+            <label>
+                <input type="radio" name="car_1" value="c15"> Engineer or Scientist    </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>How important is creativity in your ideal career?</legend>
+            <label>
+                <input type="radio" name="car_2" value="c21"> Extreamly important
+            </label>
+            <label>
+                <input type="radio" name="car_2" value="c22"> Importat, but not essential
+            </label>
+            <label>
+                <input type="radio" name="car_2" value="c23"> Neutral, creativity varies by task
+            </label>
+            <label>
+                <input type="radio" name="car_2" value="c24"> Not very important
+            </label>
+            <label>
+                <input type="radio" name="car_2" value="c25"> Not important at all
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>How comfortable are you with dealing with numbers and data in your career?</legend>
+            <label>
+                <input type="radio" name="car_3" value="c31"> Very comfortable 
+            </label>
+            <label>
+                <input type="radio" name="car_3" value="c32"> Somewhat comfortable
+            </label>
+            <label>
+                <input type="radio" name="car_3" value="c33">  Neutral,  numbers don't bother me
+            </label>
+            <label>
+                <input type="radio" name="car_3" value="c34"> Not very comfortable
+            </label>
+            <label>
+                <input type="radio" name="car_3" value="c35"> Avoid numbers whenever possible 
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Would you prefer a career that involves a lot of research and analysis?</legend>
+            <label>
+                <input type="radio" name="car_4" value="c41"> 	Yes, I enjoy research and analysis 
+            </label>
+            <label>
+                <input type="radio" name="car_4" value="c42"> I'm open to it, but it's not a must 
+            </label>
+            <label>
+                <input type="radio" name="car_4" value="c43"> No, I prefer more creative or people-focused roles
+            </label>
+            <label>
+                <input type="radio" name="car_4" value="c44">A combination of these
+            </label>
+            <label>
+                <input type="radio" name="car_4" value="c45"> Not Sure
+            </label>
+        </fieldset>
+
+        <fieldset>
+        
+            <legend>How important is job stability and earning potential in your career choice?</legend>
+            <label>
+                <input type="radio" name="car_5" value="c51"> Very important
+            </label>
+            <label>
+                <input type="radio" name="car_5" value="c52"> Somewhat important
+            </label>
+            <label>
+                <input type="radio" name="car_5" value="c53"> Neutral, I value other aspects more
+            </label>
+            <label>
+                <input type="radio" name="car_5" value="c54"> Not very important
+            </label>
+            <label>
+                <input type="radio" name="car_5" value="c55"> Not important at all
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>How would you rate your communication skills?</legend>
+            <label>
+                <input type="radio" name="ss_1" value="ss11"> Excellent 
+            </label>
+            <label>
+                <input type="radio" name="ss_1" value="ss12">Good
+            </label>
+            <label>
+                <input type="radio" name="ss_1" value="ss13"> Average
+            </label>
+            <label>
+                <input type="radio" name="ss_1" value="ss14"> Below average 
+            </label>
+            <label>
+                <input type="radio" name="ss_1" value="ss15"> Poor   
+            </label>
+        </fieldset>
+
+        <fieldset> 
+            <legend>Which of the following best describes your problem-solving abilities?</legend>
+            <label>
+                <input type="radio" name="ss_2" value="ss21"> Exceptional
+            </label>
+            <label>
+                <input type="radio" name="ss_2" value="ss22"> Above average
+            </label>
+            <label>
+                <input type="radio" name="ss_2" value="ss23"> Average
+            </label>
+            <label>
+                <input type="radio" name="ss_2" value="ss24"> Below Average
+            </label>
+            <label>
+                <input type="radio" name="ss_2" value="ss25"> Poor
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>How do you feel about working in teams?</legend>
+            <label>
+                <input type="radio" name="ss_3" value="ss31">I prefer working independently 
+            </label>
+            <label>
+                <input type="radio" name="ss_3" value="ss32"> I prefer working independently 
+            </label>
+            <label>
+                <input type="radio" name="ss_3" value="ss33"> I prefer working in teams 
+            </label>
+            <label>
+                <input type="radio" name="ss_3" value="ss34">I'm flexible, it depends on the project 
+            </label>
+            <label>
+                <input type="radio" name="ss_3" value="ss35"> I haven't thought about it 
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>WHow would you rate your attention to detail?</legend>
+            <label>
+                <input type="radio" name="ss_4" value="ss41"> 	Exceptional
+            </label>
+            <label>
+                <input type="radio" name="ss_4" value="ss42"> Above Average
+            </label>
+            <label>
+                <input type="radio" name="ss_4" value="ss43">  Average
+            </label>
+            <label>
+                <input type="radio" name="ss_4" value="ss44">Below Average
+            </label>
+            <label>
+                <input type="radio" name="ss_4" value="ss45">Poor
+            </label>
+        </fieldset> 
+
+        <fieldset>
+            <legend>Are you comfortable with public speaking and presentations?</legend>
+            <label>
+                <input type="radio" name="ss_5" value="ss51"> Very comfortable
+            </label>
+            <label>
+                <input type="radio" name="ss_5" value="ss52"> Somewhat comfortable
+            </label>
+            <label>
+                <input type="radio" name="ss_5" value="ss53"> Neutral, it depends on the situation 
+            </label>
+            <label>
+                <input type="radio" name="ss_5" value="ss54">Not very comfortable 
+            </label>
+            <label>
+                <input type="radio" name="ss_5" value="ss55"> Avoid public speaking whenever possible 
+            </label>
+        </fieldset> 
+
+        <fieldset>
+            <legend>What do you enjoy doing in your free time?</legend>
+            <label>
+                <input type="radio" name="ip_1" value="ip11"> Reading books or writing 
+            </label>
+            <label>
+                <input type="radio" name="ip_1" value="ip12"> Managing finances or investing
+            </label>
+            <label>
+                <input type="radio" name="ip_1" value="ip13"> Exploring nature or science-related activities
+            </label>
+            <label>
+                <input type="radio" name="ip_1" value="ip14"> Volunteering or helping others
+            </label>
+            <label>
+                <input type="radio" name="ip_1" value="ip15"> Creating art or crafts    </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Which subjects or topics do you find the most fascinating?</legend>
+            <label>
+                <input type="radio" name="ip_2" value="ip21"> Literature and humanities
+            </label>
+            <label>
+                <input type="radio" name="ip_2" value="ip22"> Economics and buisness studies
+            </label>
+            <label>
+                <input type="radio" name="ip_2" value="ip23"> Biology or Chemistry
+            </label>
+            <label>
+                <input type="radio" name="ip_2" value="ip24"> History and social sciences
+            </label>
+            <label>
+                <input type="radio" name="ip_2" value="ip25"> Physics or computer science
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Have you ever been deeply engaged in a project or activity that you lost track of time?</legend>
+            <label>
+                <input type="radio" name="ip_3" value="ip31"> Frequently 
+            </label>
+            <label>
+                <input type="radio" name="ip_3" value="ip32"> Occasionally
+            </label>
+            <label>
+                <input type="radio" name="ip_3" value="ip33">  Really
+            </label>
+            <label>
+                <input type="radio" name="ip_3" value="ip34"> Never
+            </label>
+            <label>
+                <input type="radio" name="ip_3" value="ip35"> Not sure
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Are there any historical figures or role models whose careers you admire?</legend>
+            <label>
+                <input type="radio" name="ip_4" value="ip41"> 	Yes, many
+            </label>
+            <label>
+                <input type="radio" name="ip-4" value="ip42"> A few 
+            </label>
+            <label>
+                <input type="radio" name="ip_4" value="ip43"> Not really
+            </label>
+            <label>
+                <input type="radio" name="ip_4" value="ip44">I haven't thought about it
+            </label>
+            <label>
+                <input type="radio" name="ip_4" value="ip45"> Not sure
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>How do you envision yourself making a positive impact on society through your career?</legend>
+            <label>
+                <input type="radio" name="ip_5" value="ip51"> By inspiring others through art or culture
+            </label>
+            <label>
+                <input type="radio" name="ip_5" value="ip52"> By driving economic growth and innovation 
+            </label>
+            <label>
+                <input type="radio" name="ip_5" value="ip53"> By advancing scientific discoveries and healthcare
+            </label>
+            <label>
+                <input type="radio" name="ip_5" value="ip54"> By educating and emporing others
+            </label>
+            <label>
+                <input type="radio" name="ip_5" value="ip55">  I haven't thought about it
+            </label>
+        </fieldset>
+
+        <!-- Question 16: Single-choice -->
+        <!-- <fieldset>
+            <legend>Do you have any specific career goals or aspirations?</legend>
+            <label>
+                <input type="radio" name="career_1" value="c11"> Yes, I have clear career goals
+            </label>
+            <label>
+                <input type="radio" name="career_1" value="c12"> I have some ideas, but not fully clear
+            </label>
+            <label>
+                <input type="radio" name="career_1" value="c13"> I'm still exploring my options
+            </label>
+            <label>
+                <input type="radio" name="career_1" value="c14"> I'm not sure
+            </label>
+        </fieldset> -->
+
+
+
+
+
+
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
